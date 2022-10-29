@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      background: rgb(239, 239, 239);
+    }
+
+    .container {
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 5px;
+      max-width: 1000px;
+      border: 1px solid rgb(130, 117, 117);
+      border-radius: 5px;
+    }
+
+    .toDo_items {
+      display: flex;
+      flex-direction: column;
+
+      border-radius: 10px;
+      background-color: rgb(238, 245, 185);
+      color: rgb(67, 50, 50);
+      border-bottom: 2px solid rgb(123, 80, 80);
+    }
+
+    .toDo_items_li {
+      vertical-align: middle;
+      list-style-type: square;
+      color: rgb(71, 57, 57);
+      padding: 10px 5px 5px 50px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 20px;
+      height: 30px;
+
+      -webkit-animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        height: 0px;
+      }
+
+      100% {
+        opacity: 1;
+        height: 30px;
+      }
+    }
+
+    .submitButton {
+      background: #4592d6;
+      color: #fff;
+      font-family: Sans-serif;
+      font-size: 14px;
+      height: 40px;
+      width: 100px;
+      margin: 10px 10px;
+      text-align: center;
+      border: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    .submitButton:hover {
+      background: #3071a9;
+    }
+
+    .textField {
+      font-family: Sans-serif;
+      font-size: 16px;
+      height: 40px;
+
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+
+  <script>
+
+    var list_elems = [];
+    var id = 1;
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      return 0;
+    }
+
+    function add_toDo(event) {
+      var item = document.getElementById("toDo_item").value;
+      var output = document.getElementById("list_Output");
+
+      if (item && !list_elems.some((value) => value[1] === item)) {
+        list_elems.push([id, item]);
+        id++;
+        console.log(list_elems)
+
+        var toDo_ul = document.getElementById("toDo_List");
+        let li = document.createElement("li");
+        li.innerText = item
+        li.innerHTML = item /* + "<option id=' + id + '>"; */
+        li.className = "toDo_items_li";
+        toDo_ul.appendChild(li);
+        output.innerHTML = "Item added to list!";
+      } else {
+        output.innerHTML = "Cannot add item!";
+      }
+    }
+  </script>
+
+  <body>
+    <div class="container">
+
+        <h1>ToDo List - Test</h1>
+
+      <form onsubmit="handleSubmit(event)">
+        <label for="toDo_item">Item:</label>
+        <input
+          type="text"
+          class="textField"
+          id="toDo_item"
+          size="50"
+          maxlength="50"
+          autofocus
+        />
+        <input
+          type="button"
+          class="submitButton"
+          id="AddBtn"
+          onclick="add_toDo(event)"
+          value="Add"
+        />
+        <output id="list_Output"></output>
+      </form>
+
+      <ul class="toDo_items" id="toDo_List"></ul>
+    </div>
+  </body>
+</html>
