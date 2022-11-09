@@ -11,4 +11,5 @@ Here are some spare-time small projects showcasing my current skills. I will add
 **Lainalapiot (Lainaamo)** : A *group-project* using Python / Django, HTML, CSS and Bootstrap. The project name is arbitrary but this showcases the knowledge in full-stack development using Django.
 
 ## JS:
-**Todo Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browser cache.
+**Todo-List Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browser cache.
+NOTE! Run project via a local server eg. VSCode Live Server
