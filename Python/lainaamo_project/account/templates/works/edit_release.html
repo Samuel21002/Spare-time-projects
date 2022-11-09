@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container">
+
+    {% if user.is_authenticated %}
+
+        <h2>Muokkaa julkaisua</h2>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field|as_crispy_field }}
+                    {% if field.name == 'authors' %}
+                        <a href="#" class="mt-1 mb-1 btn btn-secondary" id="btn-nav" data-bs-toggle="modal" data-bs-target="#AuthorModal">
+                            Lisää tekijöitä
+                        </a>
+                    {% elif field.name == 'topics' %}
+                        <a href="#" class="mt-1 mb-1 btn btn-secondary" id="btn-nav" data-bs-toggle="modal" data-bs-target="#TopicModal">
+                            Lisää aiheita
+                        </a>
+                    {% endif %}
+                {% endfor %}
+                <button type="submit" class="mt-1 mb-1 btn btn-primary">LÄHETÄ</button>
+            </form>
+
+    {% else %}
+        Et ole kirjautuneena sisään
+    {% endif %}
+
+</div>
+
+{% include 'works/addauthormodal.html' %}
+{% include 'works/addtopicmodal.html' %}
+
+{% endblock %}

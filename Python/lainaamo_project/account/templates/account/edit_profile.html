@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<h1>Muokkaa tietoja</h1>
+<div class="fomr-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Tallenna" class="mt-2 mb-2 btn btn-primary">
+    </form>
+</div>
+
+{% endblock %}

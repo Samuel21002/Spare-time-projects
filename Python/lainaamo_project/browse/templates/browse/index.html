@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>{% block title %} - Selaa{% endblock %}</title>
+
+{% block content %}
+<div class="content mx-auto px-2 bg-white">
+
+    <!-- HAKUKENTTÄ -->
+    <div class="m-5">
+    {% include 'search_bar.html' %}
+    </div>
+    
+    <h1 class="text-center m-4">Selaa teoksia</h1>
+
+    <!-- HAKUTULOKSET -->
+    <div class="col">
+        {% if releases %}
+        <p class="display-8 text-center m-4">{{msg}}</p>
+        <table class="table-responsive">
+            <tr>
+                {% for rel in pagination_obj %}
+                    {% include 'browse/details_partial.html' %}
+                {% endfor %}
+            </tr>
+        </table>
+    </div> 
+
+            <!--HAKUJEN SIVUNUMERO-->
+            {% include 'pagination_block.html' %}
+
+            <!--JOS TULOKSIA EI SAATAVILLA-->
+            {% else %}
+                <p class="text-center">Ei julkaisuja</p>
+            {% endif %}
+
+</div>
+{% endblock %}
+
+

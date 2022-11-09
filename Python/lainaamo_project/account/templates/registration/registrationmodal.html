@@ -1,0 +1,44 @@
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registrationModalLabel">Rekisteröi Lainaamotunnuksesi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="{% url 'account:registration' %}" method=POST>
+          <div class="modal-body form-group">
+            {% csrf_token %}
+            <div class="form-group m-1 p-1">
+                <label for="username">Käyttätunnus</label>
+                <input type="text" class="form-control" name="username" placeholder="Syötä käyttäjätunnus">
+            </div>
+            <div class="form-group m-1 p-1">
+                <label for="first_name">Etunimi</label>
+                <input type="text" class="form-control" name="first_name" placeholder="Etunimi">
+            </div>
+            <div class="form-group m-1 p-1">
+                <label for="last_name">Sukunimi</label>
+                <input type="text" class="form-control" name="last_name" placeholder="Sukunimi">
+            </div>
+            <div class="form-group m-1 p-1">
+                <label for="email">Sähköpostiosoite</label>
+                <input type="text" class="form-control" name="email" placeholder="esimerkki@osoite.net">
+            </div>
+            <div class="form-group m-1 p-1">
+                <label for="password1">Salasana</label>
+                <input type="password" class="form-control" name="password1" placeholder="Salasana">
+            </div>
+            <div class="form-group m-1 p-1">
+                <label for="password2">Salasana uudelleen</label>
+                <input type="password" class="form-control" name="password2" placeholder="Salasana">
+            </div>
+            <input type="submit" value="Rekisteröidy" class=" mt-2 mb-2 ml-2 btn btn-primary">
+            <a href="{% url 'login' %}" alt="Kirjautumissivulle">
+                <button type="button" class="btn btn-secondary mt-0">Kirjautumissivulle</button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

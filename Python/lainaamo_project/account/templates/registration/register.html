@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Rekisteröityminen{% endblock %}
+{% block content%}
+<div class="content mx-auto px-2 bg-light">
+<h1>Rekisteröi Lainaamotunnuksesi</h1>
+
+{% if form.errors %}
+    <div class="mt-2 alert alert-warning alert-dismissible fade show" role="alert">
+        Lomakkeen tiedoista löytyi virhe.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        </button>
+    </div>
+{% endif %}
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Kirjaudu" class="mt-2 mb-2 btn btn-primary">
+    </form>
+<div>
+
+{% endblock %}

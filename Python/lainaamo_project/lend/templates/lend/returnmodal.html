@@ -1,0 +1,21 @@
+    <!--Modal-->
+    <div class="modal fade" id="returnModal_{{lend.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">{{lend.name_of_release}} - Palauta teos </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p>Haluatko palauttaa teoksen '{{lend.name_of_release}}'?</p>
+              </div>
+              <div class="modal-footer">
+                  <form method="post" action="{% url 'lend:add_to_returned' id=lend.id %}">
+                      {% csrf_token %}
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Peruuta</button>
+                      <button type="submit" class="btn btn-success ms-auto justify-content-end m-3 p-2" name="submit" data-bs-dismiss="modal">Palauta</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>

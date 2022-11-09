@@ -1,0 +1,2595 @@
+[
+{
+    "model": "browse.author",
+    "pk": 5,
+    "fields": {
+        "first_name": "Topias",
+        "last_name": "Kankaanpää"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 6,
+    "fields": {
+        "first_name": "Päivi",
+        "last_name": "Räsänen"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 7,
+    "fields": {
+        "first_name": "Markku",
+        "last_name": "Kankaanpää Wilson"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 8,
+    "fields": {
+        "first_name": "Henri",
+        "last_name": "Kuulapää"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 9,
+    "fields": {
+        "first_name": "Katri",
+        "last_name": "Helena"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 10,
+    "fields": {
+        "first_name": "Villa",
+        "last_name": "Pusero"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 11,
+    "fields": {
+        "first_name": "Kale",
+        "last_name": "Kala"
+    }
+},
+{
+    "model": "browse.author",
+    "pk": 12,
+    "fields": {
+        "first_name": "Ritva",
+        "last_name": "Uusimaa Tavastinen"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 1,
+    "fields": {
+        "topic_name": "opinnäytetyö"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 2,
+    "fields": {
+        "topic_name": "akateeminen paperi"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 3,
+    "fields": {
+        "topic_name": "vitsikirja"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 4,
+    "fields": {
+        "topic_name": "satunnainen"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 5,
+    "fields": {
+        "topic_name": "jännitys"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 6,
+    "fields": {
+        "topic_name": "kokkailu"
+    }
+},
+{
+    "model": "browse.topic",
+    "pk": 7,
+    "fields": {
+        "topic_name": "fakta"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 7,
+    "fields": {
+        "user": 1,
+        "rating": 7,
+        "verbal_review": "Aika hyvä"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 8,
+    "fields": {
+        "user": 1,
+        "rating": 6,
+        "verbal_review": "Ihan kiva paperi"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 9,
+    "fields": {
+        "user": 1,
+        "rating": 3,
+        "verbal_review": "Ei ei ei"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 10,
+    "fields": {
+        "user": 1,
+        "rating": 10,
+        "verbal_review": "Ei kommenttia. MAHTAVA!"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 11,
+    "fields": {
+        "user": 1,
+        "rating": 4,
+        "verbal_review": "Njoo"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 12,
+    "fields": {
+        "user": 1,
+        "rating": 7,
+        "verbal_review": "Toimii todellakin, olen vain sokea siis"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 13,
+    "fields": {
+        "user": 1,
+        "rating": 3,
+        "verbal_review": "Joo"
+    }
+},
+{
+    "model": "browse.review",
+    "pk": 14,
+    "fields": {
+        "user": 1,
+        "rating": 5,
+        "verbal_review": "sljrgrjgrg"
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 5,
+    "fields": {
+        "name": "Kaukoidän Sankarit",
+        "release_date": "2022-09-13T19:08:15Z",
+        "description": "Mahtava seikkailu",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            5,
+            6,
+            8,
+            9,
+            11
+        ],
+        "topics": [
+            4,
+            5
+        ],
+        "reviews": [
+            7
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 6,
+    "fields": {
+        "name": "Herra Huttusen Käsikirja",
+        "release_date": "2022-09-12T12:00:00Z",
+        "description": "Ei jaksaisi tehdä tietokantaan niin montaa juttua mutta on pakko",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            5,
+            11
+        ],
+        "topics": [
+            1
+        ],
+        "reviews": [
+            8
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 7,
+    "fields": {
+        "name": "Onkiluodon Mahtava Maa",
+        "release_date": "2022-09-05T18:02:00Z",
+        "description": "Onko pakko taas kertoa jotain millä oikeasti ei edes ole niin paljon väliä? Selvä!",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            5,
+            7,
+            8
+        ],
+        "topics": [
+            3,
+            4
+        ],
+        "reviews": [
+            9
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 8,
+    "fields": {
+        "name": "Kokkikatu 16",
+        "release_date": "2022-09-22T19:11:13Z",
+        "description": "No nyt oli kerrassaan mahtavaa scheisseä! Tehdään taikinaa ja puhutaan nuorison huonosta tulevaisuudesta",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            10
+        ],
+        "topics": [
+            6
+        ],
+        "reviews": [
+            10
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 9,
+    "fields": {
+        "name": "Jorpakossa Suhisee",
+        "release_date": "2022-09-22T19:11:59Z",
+        "description": "Taisteluseikkailu",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            6,
+            9,
+            10
+        ],
+        "topics": [
+            4,
+            5
+        ],
+        "reviews": [
+            11
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 10,
+    "fields": {
+        "name": "Prikaatin Suurenmoisin Sotilas",
+        "release_date": "2022-09-22T20:48:26Z",
+        "description": "Tämähän oli aika kiinnostava, mutta en jaksanut kuunnella äänikirjaa lainkaan. Antaisin kuitenkin tälle aika hyvän arvosanan jossen olisi täysin sokea.",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            5,
+            8
+        ],
+        "topics": [
+            2
+        ],
+        "reviews": [
+            12
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 11,
+    "fields": {
+        "name": "Ystävänpäivä",
+        "release_date": "2022-09-29T18:05:43Z",
+        "description": "Aika kova teos mutta ois voinut olla parempi",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            7,
+            8
+        ],
+        "topics": [
+            4
+        ],
+        "reviews": [
+            10
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 12,
+    "fields": {
+        "name": "Hevoset Rannalla v2",
+        "release_date": "2022-09-29T18:06:33Z",
+        "description": "Nyt ei napannut yhtään mutta itse asiassa oli aika hyvä",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            12
+        ],
+        "topics": [
+            7
+        ],
+        "reviews": [
+            13
+        ]
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 13,
+    "fields": {
+        "name": "Testiteos",
+        "release_date": "2022-09-30T16:42:50Z",
+        "description": "blääblää",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            8
+        ],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 14,
+    "fields": {
+        "name": "Testiteos 3",
+        "release_date": "2022-09-30T16:45:21Z",
+        "description": "sdfdsf",
+        "file": "",
+        "owner_id": 1,
+        "authors": [
+            8,
+            11
+        ],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 15,
+    "fields": {
+        "name": "Ensimmäinen testiteos",
+        "release_date": "2022-10-01T00:00:00Z",
+        "description": "Jännittävä teos",
+        "file": "static/HAMK-opinnaytetyon-asiakirjamalli-2021_LUlPsGD.dotx",
+        "owner_id": 1,
+        "authors": [
+            5
+        ],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 16,
+    "fields": {
+        "name": "Toinen testiteos",
+        "release_date": "2022-10-01T00:00:00Z",
+        "description": "Päivin teos",
+        "file": "static/HAMK-opinnaytetyon-asiakirjamalli-2021_On6Xkcx.dotx",
+        "owner_id": 1,
+        "authors": [
+            6
+        ],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 17,
+    "fields": {
+        "name": "Kolmas teos",
+        "release_date": "2022-10-01T00:00:00Z",
+        "description": "Markun teos",
+        "file": "static/HAMK-opinnaytetyon-asiakirjamalli-2021_RDK5nsO.dotx",
+        "owner_id": 1,
+        "authors": [
+            7
+        ],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 18,
+    "fields": {
+        "name": "Neljäs teos",
+        "release_date": "2022-10-01T00:00:00Z",
+        "description": "Henrin teos",
+        "file": "static/HAMK-opinnaytetyon-asiakirjamalli-2021_bJozIbw.dotx",
+        "owner_id": 1,
+        "authors": [],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "browse.release",
+    "pk": 19,
+    "fields": {
+        "name": "Neljäs teos",
+        "release_date": "2022-10-01T00:00:00Z",
+        "description": "Henrin teos",
+        "file": "static/HAMK-opinnaytetyon-asiakirjamalli-2021_08Khv1b.dotx",
+        "owner_id": 1,
+        "authors": [],
+        "topics": [],
+        "reviews": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-09-20T17:02:33.409Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Release object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-09-20T17:05:33.101Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Author object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-09-22T10:17:53.127Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "Topic object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-09-22T10:18:00.247Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "Topic object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-09-22T10:18:05.843Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Topic object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-09-22T10:19:46.058Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "4",
+        "object_repr": "Author object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-09-22T10:20:10.905Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "4",
+        "object_repr": "Release object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-09-22T10:33:49.756Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "4",
+        "object_repr": "Pertin Kirja",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Topics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-09-22T10:33:56.068Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Ei jaksa timitomia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Topics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-09-22T10:35:51.708Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "4",
+        "object_repr": "satunnainen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-09-22T10:35:58.640Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "5",
+        "object_repr": "jännitys",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-09-22T10:36:52.305Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Timin ja Tomin seikkailut",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Topics\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-09-22T10:40:08.500Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Review object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-09-22T10:40:18.660Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Review object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-09-22T10:51:37.162Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "Review object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-09-22T10:51:37.165Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Review object (1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-09-22T10:51:46.147Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "Review object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-09-22T10:51:53.122Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "Review object (4)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-09-22T11:09:31.866Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "10 - Pidin niin paljon",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-09-22T11:09:31.869Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "1 - En pitänyt",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-09-22T11:09:43.835Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "2 - Oli aika kökkö",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-09-22T11:09:45.980Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Timin ja Tomin seikkailut",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reviews\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-09-22T11:10:02.564Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "7 - Aika hyvä",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-09-22T11:10:10.343Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Ei jaksa timitomia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reviews\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-09-22T19:05:46.754Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "4",
+        "object_repr": "Kurikka, pertti",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-09-22T19:05:46.757Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "3",
+        "object_repr": "Tomi, herra",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-09-22T19:05:46.758Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "2",
+        "object_repr": "Tomi, timo",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-09-22T19:05:46.759Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "1",
+        "object_repr": "Tom, tim",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-09-22T19:06:03.985Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "4",
+        "object_repr": "Pertin Kirja",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2022-09-22T19:06:03.986Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "3",
+        "object_repr": "Ei jaksa timitomia",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2022-09-22T19:06:03.987Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "2",
+        "object_repr": "Tomin ja Timin seikkailut",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2022-09-22T19:06:03.988Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "1",
+        "object_repr": "Timin ja Tomin seikkailut",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2022-09-22T19:06:57.355Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "7 - Aika hyvä",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2022-09-22T19:06:57.358Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5",
+        "object_repr": "2 - Oli aika kökkö",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2022-09-22T19:07:18.580Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "5",
+        "object_repr": "Kankaanpää, topias",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2022-09-22T19:07:24.191Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "6",
+        "object_repr": "Räsänen, päivi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2022-09-22T19:07:34.415Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "7",
+        "object_repr": "Kankaanpää wilson, markku",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2022-09-22T19:07:39.981Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "8",
+        "object_repr": "Kuulapää, henri",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2022-09-22T19:07:44.550Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "9",
+        "object_repr": "Helena, katri",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2022-09-22T19:07:48.783Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "10",
+        "object_repr": "Pusero, villa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2022-09-22T19:08:31.114Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "7",
+        "object_repr": "7 - Aika hyvä",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2022-09-22T19:08:33.732Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "5",
+        "object_repr": "Kaukoidän Sankarit",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2022-09-22T19:10:15.154Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "6 - Ihan kiva paperi",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2022-09-22T19:10:18.443Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "6",
+        "object_repr": "Herra Huttusen Käsikirja",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2022-09-22T19:11:02.117Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "3 - Ei ei ei",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2022-09-22T19:11:04.384Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "7",
+        "object_repr": "Onkiluodon Mahtava Maa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2022-09-22T19:11:37.901Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "6",
+        "object_repr": "kokkailu",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2022-09-22T19:11:49.705Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "10 - Ei kommenttia. MAHTAVA!",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2022-09-22T19:11:51.733Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "8",
+        "object_repr": "Kokkikatu 16",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2022-09-22T19:12:16.074Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "4 - Njoo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2022-09-22T19:12:18.382Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "9",
+        "object_repr": "Jorpakossa Suhisee",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2022-09-22T20:49:25.868Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "7 - Toimii todellakin, olen vain sokea siis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2022-09-22T20:49:28.584Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "10",
+        "object_repr": "Prikaatin Suurenmoisin Sotilas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2022-09-22T20:50:41.438Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "10",
+        "object_repr": "Prikaatin Suurenmoisin Sotilas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2022-09-22T22:18:17.572Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "10",
+        "object_repr": "Prikaatin Suurenmoisin Sotilas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Authors\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2022-09-22T22:18:27.137Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "9",
+        "object_repr": "Jorpakossa Suhisee",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Authors\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2022-09-22T22:18:31.524Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "8",
+        "object_repr": "Kokkikatu 16",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Authors\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2022-09-22T22:18:36.556Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "7",
+        "object_repr": "Onkiluodon Mahtava Maa",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Authors\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2022-09-22T22:18:42.873Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "7",
+        "object_repr": "Onkiluodon Mahtava Maa",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2022-09-22T22:18:46.319Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "7",
+        "object_repr": "Onkiluodon Mahtava Maa",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2022-09-22T22:18:54.454Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "11",
+        "object_repr": "Kala, kale",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2022-09-22T22:18:59.709Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "6",
+        "object_repr": "Herra Huttusen Käsikirja",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Authors\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2022-09-22T22:19:06.410Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "5",
+        "object_repr": "Kaukoidän Sankarit",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Authors\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2022-09-29T18:06:11.506Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "11",
+        "object_repr": "Ystävänpäivä",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2022-09-29T18:06:31.301Z",
+        "user": 1,
+        "content_type": 1,
+        "object_id": "12",
+        "object_repr": "Ritva Uusimaa Tavastinen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2022-09-29T18:06:50.756Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "7",
+        "object_repr": "fakta",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2022-09-29T18:07:03.538Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "3 - Joo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2022-09-29T18:07:05.059Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "12",
+        "object_repr": "Hevoset Rannalla v2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2022-09-30T16:40:43.009Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "14",
+        "object_repr": "5 - sljrgrjgrg",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2022-09-30T16:45:04.440Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "13",
+        "object_repr": "Testiteos",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2022-09-30T16:45:27.177Z",
+        "user": 1,
+        "content_type": 2,
+        "object_id": "14",
+        "object_repr": "Testiteos 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add author",
+        "content_type": 1,
+        "codename": "add_author"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change author",
+        "content_type": 1,
+        "codename": "change_author"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete author",
+        "content_type": 1,
+        "codename": "delete_author"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view author",
+        "content_type": 1,
+        "codename": "view_author"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add release",
+        "content_type": 2,
+        "codename": "add_release"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change release",
+        "content_type": 2,
+        "codename": "change_release"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete release",
+        "content_type": 2,
+        "codename": "delete_release"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view release",
+        "content_type": 2,
+        "codename": "view_release"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add release author",
+        "content_type": 3,
+        "codename": "add_releaseauthor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change release author",
+        "content_type": 3,
+        "codename": "change_releaseauthor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete release author",
+        "content_type": 3,
+        "codename": "delete_releaseauthor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view release author",
+        "content_type": 3,
+        "codename": "view_releaseauthor"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 4,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 4,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 4,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 4,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 5,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 5,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 5,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 5,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 6,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 6,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 6,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 6,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 7,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 7,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 7,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 7,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 8,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 8,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 8,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 8,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 9,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 9,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 9,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 9,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add review",
+        "content_type": 10,
+        "codename": "add_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change review",
+        "content_type": 10,
+        "codename": "change_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete review",
+        "content_type": 10,
+        "codename": "delete_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view review",
+        "content_type": 10,
+        "codename": "view_review"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add topic",
+        "content_type": 11,
+        "codename": "add_topic"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change topic",
+        "content_type": 11,
+        "codename": "change_topic"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete topic",
+        "content_type": 11,
+        "codename": "delete_topic"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view topic",
+        "content_type": 11,
+        "codename": "view_topic"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add association",
+        "content_type": 12,
+        "codename": "add_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change association",
+        "content_type": 12,
+        "codename": "change_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete association",
+        "content_type": 12,
+        "codename": "delete_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view association",
+        "content_type": 12,
+        "codename": "view_association"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add code",
+        "content_type": 13,
+        "codename": "add_code"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change code",
+        "content_type": 13,
+        "codename": "change_code"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete code",
+        "content_type": 13,
+        "codename": "delete_code"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view code",
+        "content_type": 13,
+        "codename": "view_code"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add nonce",
+        "content_type": 14,
+        "codename": "add_nonce"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change nonce",
+        "content_type": 14,
+        "codename": "change_nonce"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete nonce",
+        "content_type": 14,
+        "codename": "delete_nonce"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view nonce",
+        "content_type": 14,
+        "codename": "view_nonce"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add user social auth",
+        "content_type": 15,
+        "codename": "add_usersocialauth"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change user social auth",
+        "content_type": 15,
+        "codename": "change_usersocialauth"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete user social auth",
+        "content_type": 15,
+        "codename": "delete_usersocialauth"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view user social auth",
+        "content_type": 15,
+        "codename": "view_usersocialauth"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add partial",
+        "content_type": 16,
+        "codename": "add_partial"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change partial",
+        "content_type": 16,
+        "codename": "change_partial"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete partial",
+        "content_type": 16,
+        "codename": "delete_partial"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view partial",
+        "content_type": 16,
+        "codename": "view_partial"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add rental",
+        "content_type": 17,
+        "codename": "add_rental"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change rental",
+        "content_type": 17,
+        "codename": "change_rental"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete rental",
+        "content_type": 17,
+        "codename": "delete_rental"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view rental",
+        "content_type": 17,
+        "codename": "view_rental"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$2aTdrZThaZslVE3lQ0OmjN$dGH1Gl6P6O7zSYcMKpZE+ZAepTtb+FHCpqzqaJ6QGpg=",
+        "last_login": "2022-09-30T15:46:02.749Z",
+        "is_superuser": true,
+        "username": "lainalapio",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-09-20T16:39:33.550Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$5QmukqqIOKTbplfuBW2qsU$kQXylkNoBZJkQhy4QP0grw759nZ9726DVo9nqaLKWsE=",
+        "last_login": "2022-09-24T06:24:20.611Z",
+        "is_superuser": false,
+        "username": "veinie",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T06:24:20.427Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$XCVc58mOiSEUo5XkncuNAe$Fx0fUSmscaacaI6jvvnZIrbAIlBc4j12EhrC+h/Dn/I=",
+        "last_login": "2022-09-24T10:36:43.329Z",
+        "is_superuser": false,
+        "username": "veikka",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T06:25:49.934Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$tP7qTCA7P0odFKWxht6mt4$bxysZC+Ro2GJv6KuWG1UW3sKQdp0Eh/sV+g0AKgjA/A=",
+        "last_login": "2022-09-24T09:22:04.717Z",
+        "is_superuser": false,
+        "username": "testi",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T06:33:04.966Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$V8c6sXYk89uz83VF9anVPD$2pWLf3MT+ERcqJTd9i0qObTk+zTB/rnGA16MmfpS0Xs=",
+        "last_login": "2022-09-24T06:42:20.040Z",
+        "is_superuser": false,
+        "username": "testi2",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T06:42:19.854Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$mLLg9hET9uLNZVhWprQ7oe$TqC1A4dluV9FEbY0jq4YimBz3i28vxm1z/sftoPOym4=",
+        "last_login": "2022-09-24T07:03:18.935Z",
+        "is_superuser": false,
+        "username": "testi3",
+        "first_name": "Assi",
+        "last_name": "Asentaja",
+        "email": "asentaja@asentaja.as",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T07:03:18.752Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$oLLRE6AplhAoa9Jq8wkwcr$zAFaMFydpax1MNEPpcaY7XNXPz0qsg69L5oE1C9sMgI=",
+        "last_login": "2022-09-24T09:21:19.263Z",
+        "is_superuser": false,
+        "username": "testi4",
+        "first_name": "Assi",
+        "last_name": "Asentaja",
+        "email": "assi@asentaja.gov",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T09:16:51.012Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$1LwRd92MOmI1eObzBR9ebv$AQRgi9TO5qGA/tUiFJjy1x7Z0pqCdkVeC6ikksc+9W0=",
+        "last_login": "2022-09-24T09:24:52.046Z",
+        "is_superuser": false,
+        "username": "testi666",
+        "first_name": "b",
+        "last_name": "abc",
+        "email": "osoite@operaattori.fi",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-24T09:24:51.870Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$lQL8mKCUEeNTTzJxiPbabD$f8Idn8Xm35q4tNv+v+DiNmTsSzsuKXjHhpJXSWWjxkQ=",
+        "last_login": "2022-09-28T14:51:47.892Z",
+        "is_superuser": false,
+        "username": "testi10",
+        "first_name": "Testi",
+        "last_name": "Henkilö",
+        "email": "testi@henkilo.net",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-28T13:03:10.742Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "!0NbM1zf6O1GrdVoaBmE7o0peSoYpbYptVu4cIJQF",
+        "last_login": "2022-09-30T19:14:10.243Z",
+        "is_superuser": false,
+        "username": "veiniem",
+        "first_name": "",
+        "last_name": "",
+        "email": "niemitukia@com.fi",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-28T13:06:28.538Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+        "password": "!twNTZaC00iVj1GpdbmoO3hSi31r08hSn538o8Sxi",
+        "last_login": "2022-09-28T15:40:21.220Z",
+        "is_superuser": false,
+        "username": "veinie5f344e94c4744fa8",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-28T15:40:21.161Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ZPHj94EeCClr2uXHLHHWuM$NttSy5HwS7fIvuw301FfO2XTk9b9QnYq3fRkbQTivJA=",
+        "last_login": "2022-09-30T18:37:31.144Z",
+        "is_superuser": false,
+        "username": "testi6666",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-30T18:35:52.042Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$RvcFlritT1N48zoecip45n$0p1nlzzxZW2L/qF+5bsx5SeeSXu7483Y+J1CheyFb9k=",
+        "last_login": "2022-09-30T18:38:18.737Z",
+        "is_superuser": false,
+        "username": "testi66666",
+        "first_name": "Veikka",
+        "last_name": "Niemitukia",
+        "email": "veikka@niemi.tukia",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-30T18:37:10.990Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$k0jiPdEJCndRNWpTlvaqA9$rERguNVvVefTFXfOulNtSyyLosEtvzaL8ETG0Hkl31k=",
+        "last_login": "2022-09-30T18:40:54.602Z",
+        "is_superuser": false,
+        "username": "Testi666666",
+        "first_name": "Testi",
+        "last_name": "Käyttäjä",
+        "email": "testi@käyttäjä.net",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-09-30T18:40:54.393Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$Q2xm0r24fjxguDrO77MWY0$aVpN8vdCdGVueNOZJRfQ7bxK7ZmAt51SMz2RABezVic=",
+        "last_login": "2022-10-01T08:28:53.781Z",
+        "is_superuser": false,
+        "username": "testi101",
+        "first_name": "Testi",
+        "last_name": "Henkilö",
+        "email": "testi@käyttäjä.net",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-10-01T08:21:26.314Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "browse",
+        "model": "author"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "browse",
+        "model": "release"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "browse",
+        "model": "releaseauthor"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "browse",
+        "model": "review"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "browse",
+        "model": "topic"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "social_django",
+        "model": "association"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "social_django",
+        "model": "code"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "social_django",
+        "model": "nonce"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "social_django",
+        "model": "usersocialauth"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "social_django",
+        "model": "partial"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "browse",
+        "model": "rental"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "0dr3ffd3sg60rj3yqwvgnmkfk2dzl4pd",
+    "fields": {
+        "session_data": ".eJxVjEsOwjAMBe-SNYrcNMQNS_Y9Q2XHDimgVOpnhbg7VOoCtm9m3ssMtK1l2Badh1HMxTTm9LsxpYfWHcid6m2yaarrPLLdFXvQxfaT6PN6uH8HhZbyrSFkhhizx0AsJE4zpg7OnhygYPJOMXpspFUODUubvAJCx4Co4oJ5fwDwBDgB:1oagIi:ursN_1st-m14CEHaVHveVMd9w0byp_kOii_lYWAVW3o",
+        "expire_date": "2022-10-04T16:40:48.001Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "4ir4hooe7b17syakump49nonygzk6834",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJhbkxab2MzU0hQYmtyZ0xGenJ0NGwzQ3RBZXJ1d2U3dSJ9:1odXxz:TcIKOYjiWI7_CmgAsYzhLFf_VdG7Uq-hrltKE65wNwM",
+        "expire_date": "2022-10-12T14:23:15.201Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "92d3scp01pyydm8ejkrs9c1mamg8pb4u",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJBQ2kxN0o4VW1lbzhqMEczVEZkTWxIS1ZobXI2RDBneCJ9:1odXye:Ipi20FvcEbH053244Psy2zpFB0BmY1k-DYibi9I47Sk",
+        "expire_date": "2022-10-12T14:23:56.208Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ak1nwdfdq04wrapc16u891zj17qoq9e1",
+    "fields": {
+        "session_data": ".eJxVjssKwjAURP8laylNaprUnXWhVNCFoOAm3CTXNvSFJkVB_HfrY6GrgRnOzNxJ6UI1aOUDBCQzksWHduHqwpWr4zrH236ni03Xp218lkmdX8mEKBhCpQaPF-XsiND439Rgauxeie-Ng0aZ_oLR1_XRZzBavmU7HzH2z1fgqxFGSQ1S4BJjKgSjjGXaZgkiZ5ozYQ0He0pMKo0WIAVlSC1lU5jqzJwET8fS7_67ugEfVNOXrvs5-PlCHk_oP1gr:1odYIy:O7DA-X-FV0ZX7IpwlG7tpmUuF3Ge44IzVj3ExxzNz6E",
+        "expire_date": "2022-10-12T14:44:56.607Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cr5wf8358zmfmvzb3d7z3q0rfcxpd4tq",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJvRXZIaDU2YkQ0Rk93Z1hmeWs5SU5ueHRwcnE4S2JyZCJ9:1odYA6:uERtksQ7ybfsczju8j2rV8oKnTYHoH8GMrfwq_Iy5LU",
+        "expire_date": "2022-10-12T14:35:46.490Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h6awg21mw17j3oj3hyge4oluf0kdlbgf",
+    "fields": {
+        "session_data": "e30:1obyaK:NtNVm_Ex5NHiCN9kTbEN-rAtKblM1zJ9_3cuDuN4rJo",
+        "expire_date": "2022-10-08T06:24:20.602Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "j11nqemjgyd8j5n8lgpcgi7j8bltlyr5",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllx1pvYlPScwdqPgwPIkfKpEHeHSCmgfTPzXibRtpa0LXlOo5qzcWhOvyOTPHLdid6p3iYrU13nke2u2IMu9jppfl4O9--g0FK-NSC4IThBz5EdcAaPPg4hNg3lEChEbRWg067ve24VGUgaEEIU7kDM-wPwfTfW:1oeXrh:Dq_WTgF5IPoFkAL9SyrMtoaACohgiTIruinOANaKEO8",
+        "expire_date": "2022-10-15T08:28:53.791Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "je8pmlvafu3dylrner0454jkyhu2jumz",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJaMk1wU2Z3QjB1SGNacmtROXJVY2hzYzJ4Q3U2ZFl3USJ9:1odWlg:lPL7JkqxbFugB_nfvDhfHC6PPw9Q5Fk-lpr7tRWtYgU",
+        "expire_date": "2022-10-12T13:06:28.574Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "k1edsvz1xae5ehqdzyjv11wjk34gnz12",
+    "fields": {
+        "session_data": ".eJxVjEsOwjAMBe-SNYrcNMQNS_Y9Q2XHDimgVOpnhbg7VOoCtm9m3ssMtK1l2Badh1HMxTTm9LsxpYfWHcid6m2yaarrPLLdFXvQxfaT6PN6uH8HhZbyrSFkhhizx0AsJE4zpg7OnhygYPJOMXpspFUODUubvAJCx4Co4oJ5fwDwBDgB:1odYvt:OxX0YBtVmLLqB_yoMR0xL4LkxxMAR7rHTopyzuLYaiA",
+        "expire_date": "2022-10-12T15:25:09.524Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kqdj88fmvs5o13yni3wes1gbvwfrvkpl",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJFbnlxSWNscExXek9jbGt2Z2JWR1EzSnA4UXVoclFVbyJ9:1odZ7Z:GqOuWDjWoOM-hXphxn5VhP4cWu259wWJJdO4QXYOhBI",
+        "expire_date": "2022-10-12T15:37:13.838Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mnvkkiwtth5q24kjbh4jgtma6sm2xl26",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJ0a1BQaVZyRHdGUVc0YjRnZDNYVUpDd0tha0I3NERJMCJ9:1odaBN:gL1GHFLyS0ux2hAw62kU8zFQ0n2rs0aGrHb85w-gpqE",
+        "expire_date": "2022-10-12T16:45:13.295Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ped602l6p0jrny53gvqm265j78904zad",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJaZVlXekhpUGZ1anlaWXUyOU42eWY3OVpkdDg5V0s2UyJ9:1odXyq:GWHMySZs_OtoJ29AVeRQmt_5eJqn8-J_PiRFMOAyCkw",
+        "expire_date": "2022-10-12T14:24:08.802Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qkvsgoasj3blcvomaylh86cha9ew5m81",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGllx1pvYlPScwdqPgwPIkfKpEHeHSCmgfTPzXibRtpa0LXlOo5qzcWhOvyOTPHLdid6p3iYrU13nke2u2IMu9jppfl4O9--g0FK-NSC4IThBz5EdcAaPPg4hNg3lEChEbRWg067ve24VGUgaEEIU7kDM-wPwfTfW:1oeXkU:xK2-zorGG-yqq4-qWaNvLV8xyJziV0dXeq0Ep6wAJHI",
+        "expire_date": "2022-10-15T08:21:26.510Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qm28owgbhxlovu4b9eyhaak2oax3g1s8",
+    "fields": {
+        "session_data": ".eJxVjEsOwjAMBe-SNYrcNMQNS_Y9Q2XHDimgVOpnhbg7VOoCtm9m3ssMtK1l2Badh1HMxTTm9LsxpYfWHcid6m2yaarrPLLdFXvQxfaT6PN6uH8HhZbyrSFkhhizx0AsJE4zpg7OnhygYPJOMXpspFUODUubvAJCx4Co4oJ5fwDwBDgB:1oeIDC:073iPMq95fTtFUGVcrlD94_pk8CbJB9uB-c-8KORKf8",
+        "expire_date": "2022-10-14T15:46:02.750Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qshlzslq5c33sf3om34mky2xq5o9dppb",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJEWVpxNFFkV2pwajI4YnRua3ZwMndxM1JmbUZoeVBmSyJ9:1odZ7w:0ewDXqpXvoI7tfHoCdxSmq1M4_Dwbmy1kQnL9Na21do",
+        "expire_date": "2022-10-12T15:37:36.469Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rjrbrb54m524sy97esyacc5te73z0lh0",
+    "fields": {
+        "session_data": "e30:1obybm:y_NcEj7jbT6V-Uq3OxP0cF9Xam8Y2opYvc12kS98puU",
+        "expire_date": "2022-10-08T06:25:50.113Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "tkg5ady60graj8nemvqrv57y0j17hd8m",
+    "fields": {
+        "session_data": ".eJxVjsFqwzAQRP9F52KyimXZuYUcQqHFlKbQm1itVraoalNLvrT03-MmPtSngRnezPyILuR-tiZlzCwOIsSInyf_3dpXOj9PM7SP2cP7m39RX5enNIkHYXDOvZkTTya4BYHd1rRIHzz8JWmkgNHQOHGxuqm4Dxbnm7THBZNbvsfULzDXQAyoat6B1hKkbKxr9sxKWiW1I4XO76mqyWqsNUgGB7LE0jbktaqW0nX_Vh0xZRPHLgz_Dt6_iN8rlMJY5Q:1oeLSc:-2RP0Aa2ndLgvC79Y3T-6HPZEPnHyqNIny65sojjtRE",
+        "expire_date": "2022-10-14T19:14:10.253Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "v2zm6stncq33gcw19z4uzz4050fmdw4f",
+    "fields": {
+        "session_data": ".eJxVjj0LwjAYhP9LZikmNk3rpg4ODoqooEt4k7z9sLURk6Ag_ner7aDTwR3P3T1JUfkyKOk8eCRTsj3F9riaXw6zReCP8-oA--vdXetjCMHukg0ZEQnBlzI4vMnKdAgd_5sKdI3tJ3FWV9BIbW8YDa6L-sFo-ZX1rMPYP1-CKzsYU6qRAk9xTIVglLFMmWyCyJniTBjNweQTnaRaCUgFZUgNZTHEKtO54ElXOux_qxtwXja2qNqfg_0X8noDpP1ZAw:1oeLJp:uLJXF_k7a7ZbhmRVcGXyIE4W7fyxicTmssB4mUU3fng",
+        "expire_date": "2022-10-14T19:05:05.334Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vorn2nv6dzcqj39t7qcaqesdxvzicy4x",
+    "fields": {
+        "session_data": "e30:1obycL:CSZ574Q-aquvhsmjFY4zVmlJe4d7Rlw5lMEmnT1fKIE",
+        "expire_date": "2022-10-08T06:26:25.618Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vtr2buzo8tieyk1dcmf0xsw8smlwgalf",
+    "fields": {
+        "session_data": "eyJnaXRodWJfc3RhdGUiOiJ0TXdpWDVMMGl2enNKeVdsdllPWURNTVdsdzJjMXpIMyJ9:1odXXb:nIzq69TFd3YsNIN69YIO7Z2JnbDGxzPsLYAfTx089no",
+        "expire_date": "2022-10-12T13:55:59.506Z"
+    }
+},
+{
+    "model": "social_django.usersocialauth",
+    "pk": 1,
+    "fields": {
+        "user": 10,
+        "provider": "github",
+        "uid": "97627575",
+        "extra_data": "{\"auth_time\": 1664565250, \"id\": 97627575, \"expires\": null, \"login\": \"veiniem\", \"access_token\": \"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\", \"token_type\": \"bearer\"}",
+        "created": "2022-09-28T13:06:28.555Z",
+        "modified": "2022-09-30T19:14:10.207Z"
+    }
+},
+{
+    "model": "social_django.usersocialauth",
+    "pk": 2,
+    "fields": {
+        "user": 11,
+        "provider": "github",
+        "uid": "88605217",
+        "extra_data": "{\"auth_time\": 1664379621, \"id\": 88605217, \"expires\": null, \"login\": \"veinie\", \"access_token\": \"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\", \"token_type\": \"bearer\"}",
+        "created": "2022-09-28T15:40:21.173Z",
+        "modified": "2022-09-28T15:40:21.183Z"
+    }
+}
+]

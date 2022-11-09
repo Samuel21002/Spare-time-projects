@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>{% block title %} - Etusivu{% endblock %}</title>
+
+{% block content %}
+<div class="content mx-auto px-2">
+
+    <!-- Etsintäpalkki -->
+    <div class="m-5">
+        {% include 'search_bar.html' %}
+        </div>
+
+    <!-- Esisanat -->
+    <div class="row px-4 pb-4">
+        <div class="col">
+            <h1 class="mt-2 card-title">Rekisteröidy palveluun</h1>
+            <p class="font-weight-light">Rekisteröitymällä pääset heti käyttämään palvelua ja selaamaan tuhansittain teoksia.<br>
+                Niin akateemisista kirjoista, opinnäytetöihin ja novelleihin. Lainalapiot on tehty sinua varten</p>
+		<a href="#" class="btn btn-primary m-2" id="btn-nav" data-bs-toggle="modal" data-bs-target="#registrationModal">Rekisteröidy Tästä</a>
+        </div>
+            <div class="col">
+            <h1 class="mt-2 card-title">Lisää valheita</h1>
+            <p class="font-weight-light">Lainalapiot on Suomen suurin verkkokirjasto ja sisältää kattavimman valikoiman e-kirjoja. 
+                Jo vuodesta 2022 olemme olleet kymmenettä vuotta peräkkäin asiakastyytyväisyydeltään menestyksekkäin palvelu.
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parhaiten arvioidut julkaisut -->
+    {% comment %} <div class="d-flex container">
+        {% if top_releases %}
+            {% for rel, val in top_releases.items %}
+                <div class="d-flex flex-row flex-nowrap">
+                    {% include 'top_release_partial.html' %}        
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Tämä osio on tyhjä</p>
+        {%endif%}
+
+    </div>  {% endcomment %}
+
+</div>
+
+{% endblock %}

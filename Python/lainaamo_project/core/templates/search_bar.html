@@ -1,0 +1,21 @@
+{% block content %}
+
+<!-- HAKUPALKKI -->
+    <div class="center">
+        <form class=" d-flex justify-content-center align-self-center flex-sm-row flex-column px-lg-5" action="{% url 'browse:browse' %}">
+
+            <input class="input col-sm-6 px-5 mt-1 mx-1" name="search" type="search" placeholder="Etsi teoksia tai tekijää" aria-label="Search">
+            <select class="input col-sm-4 px-3 mt-1 mx-1" name="topics" aria-label="multiple select example">
+                <option disabled="true" selected>-- Kaikki Aiheet --</option>
+                {%if topics %}
+                    {%for topic in topics %}
+                    <option value="{{topic.id}}">{{topic}}</option>
+                    {%endfor%}
+                {%endif%}
+            </select>
+            <button class="inputbutton col-sm-3 mt-1 mx-1" type="submit">Etsi Tuloksia</button>
+        
+        </form>
+    </div>
+
+{%endblock%}

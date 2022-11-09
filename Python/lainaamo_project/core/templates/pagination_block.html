@@ -1,0 +1,32 @@
+<!-- FILTERED Pagination -->
+{% block pagination %}
+<div class="d-flex flex-column m-auto pagination mt-5">
+    <nav aria-label="Page navigation">
+        <ul class="pagination pg-grey justify-content-center">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                <a class="page-link" href="?{% if query %}search={{query}}&{% endif %}page={{ page_obj.previous_page_number }}">&laquo; Edellinen</a>
+                </li>
+            {% endif %}
+        
+            {% for i in page_obj.paginator.page_range %}
+                {% if page_obj.number == i %}
+                    <li class="page-item active"><a class="page-link">{{ i }}</a></li>
+                {% else %}
+                    <li class="page-item" ><a class="page-link" href="?{% if query %}search={{query}}&{% endif %}page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+            {% endfor %}
+            
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                <a class="page-link" href="?{% if query %}search={{query}}&{% endif %}page={{ page_obj.next_page_number }}">Seuraava</a>
+                </li>
+                <li class="page-item">
+                <a class="page-link"  href="?{% if query %}search={{query}}&{% endif %}page={{ page_obj.paginator.num_pages }}">Viimeinen &raquo;</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+<!-- end pagination-->

@@ -1,0 +1,283 @@
+body, html  {
+
+    margin: 0 auto;
+
+}
+
+p {
+
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.cust-icon {
+
+    padding-right: 5px;
+
+}
+
+
+/* NAVIGOINTIPALKKI */
+
+.navbar {
+    min-height: 8vh;
+    padding: 0 !important;
+}
+
+.logo{
+  min-height: 8vh;
+  width: auto;
+}
+
+.navbar-nav li{
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.navbar a{
+  height: 100%;
+}
+
+.navbar-nav a:hover{
+    font-weight: bolder;
+}
+
+/* TAGIT */
+
+.topic_tag {
+
+background: rgb(211, 205, 237);
+border-radius: 3px 0 0 3px;
+color: rgb(122, 75, 75);
+display: inline-block;
+height: auto;
+line-height: 26px;
+padding: 0 20px 0 23px;
+position: relative;
+margin: 0 10px 10px 0;
+text-decoration: none;
+
+}
+
+.topic_tag::before {
+background: #fff;
+border-radius: 10px;
+box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+content: '';
+height: 6px;
+left: 10px;
+position: absolute;
+width: 6px;
+top: 10px;
+}
+
+.topic_tag::after {
+background: #fff;
+border-bottom: 13px solid transparent;
+border-left: 10px solid #eee;
+border-top: 13px solid transparent;
+content: '';
+position: absolute;
+right: 0;
+top: 0;
+}
+
+.topic_tag:hover {
+background-color: crimson;
+color: white;
+}
+
+.topic_tag:hover::after {
+    border-left-color: crimson; 
+}
+
+/* Lomake tyylit */
+
+
+.card-body {
+  min-height: 300px;
+  min-width: 300px;
+  margin-right: 5px;
+}
+
+/* core/details_partial */
+.center {
+
+  
+}
+  
+  .center .input {
+    
+    
+    box-sizing: border-box;
+    border: 2px solid #000;
+    background: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.1em;
+  
+  }
+  
+  .center .input:last-child {
+    margin-bottom: 0;
+  }
+  
+  .center .input input:focus ~ span,
+  .center .input input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+  .center .inputbutton {
+    
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+    border-radius: 10px;
+    height: 50px;
+  
+  }
+  .center .inputbutton:hover {
+    background: rgb(63, 158, 83);
+    color: rgb(255, 255, 255);
+  }
+  
+  .center .inputbutton_disabled {
+    
+    background: rgb(164, 164, 164);
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  /* core/details_partial */
+
+  .border-bottom-thick {
+
+    border-bottom: 15px solid rgb(26, 121, 216);
+    
+  }
+  
+  /* lend/index & list partials */
+  .lend-container {
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    text-align: center;
+  }
+  
+  .lend-container h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+
+  }
+
+  .lend-container small {
+    font-family: 'lato', sans-serif;
+      font-size: 0.8em;
+    }
+
+  .lend-container .lend-hover:hover {
+    box-sizing: border-box;
+    background-color: black;
+    color:#d7baba;
+
+  }
+  
+  
+  .responsive-table li {
+      border-radius: 9px;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+    .responsive-table .table-header {
+      background-color: #95A5A6;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .table-row{
+    border: 3px solid transparent;
+    }
+
+   .table-row:hover {
+
+      border: 3px solid gray;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .responsive-table .col-1 {
+      flex-basis: 10%;
+    }
+    .responsive-table .col-2 {
+      flex-basis: 40%;
+    }
+    .responsive-table .col-3 {
+      flex-basis: 25%;
+    }
+    .responsive-table .col-4 {
+      flex-basis: 25%;
+    }
+    
+    @media all and (max-width: 991px) {
+
+      /* Jos headeri löytyy */
+      .table-header {
+        display: none;
+      }
+
+      .lend-container li {
+        display: block;
+        text-align: left;
+      }
+      .lend-container .col {
+        
+        flex-basis: 100%;
+        
+      }
+      .lend-container  .col {
+        display: flex;
+        padding: 10px 0;
+
+      } 
+      
+      .lend-container .col::before {
+
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: left;
+      }
+  }
+
+
+.UserReleasesList{
+  background-color:#f5f5dc80;
+  border-radius: 0.25em;
+}
+
+.UserReleasesList:hover{
+  background-color:rgba(26, 121, 216, 0.25);
+}
+
+
+/* Arvostelu */
+
+.rating {
+	direction: rtl;
+	unicode-bidi: bidi-override;
+	color: rgb(0, 0, 0); /* Personal choice */
+}
+.rating input {
+	display: none;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked + label,
+.rating input:checked + label ~ label {
+	color: #f3f31b; /* Personal color choice. Lifted from Bootstrap 4 */
+}

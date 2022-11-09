@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="container">
+
+{% if user.first_name %}
+<h2>Tervehdys, {{ user.first_name|capfirst }}!</h2>
+{% else %}
+<h2>Hello {{ user.username|capfirst }}</h2>
+{% endif %}
+{% if user.email %}
+<p>{{ user.email }}<p>
+{% endif %}
+<a class='btn btn-secondary' href="{% url 'account:edit_profile' %}">Muokkaa tietoja</a>
+
+<a class='btn btn-secondary' href="{% url 'account:upload' %}">Julkaise työsi palvelussa</a>
+
+<br>
+
+{% if releases %}
+    <h2>Lähettämäsi julkaisut:</h2>
+    {% for release in releases %}
+        <div class="mt-1 mb-1 row UserReleasesList">
+            <div class="col-sm-8">
+                {{ release.name }}
+            </div>
+            <a class='btn btn-secondary col-sm-2' href="/media/{{ release.file }}" target=blank_>Avaa</a>
+            <a class='btn btn-secondary col-sm-2' href="{% url 'account:edit_release' release.id %}">Muokkaa julkaisua</a>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+</div>
+{% endblock %}

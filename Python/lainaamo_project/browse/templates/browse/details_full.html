@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>{% block title %} - Tietoja Teoksesta{% endblock %}</title>
+
+{% block content %}
+
+<!-- Page Content -->
+<div class="container border border-light border-1 rounded-3">
+    <div class="d-flex border-bottom border–5 rounded-2">
+        <a href="javascript:history.go(-1)" class="btn btn-default ml-auto m-3">&laquo; Palaa edelliselle sivulle</a>
+        {% if user.is_authenticated %}
+            <button type="button" class="btn btn-primary ms-auto justify-content-end m-3 p-2" data-bs-toggle="modal" data-bs-target="#lendModal_{{rel.id}}">
+        {% else %}
+            <button type="button" class="btn btn-primary ms-auto justify-content-end m-3 p-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+        {% endif %}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd"
+            d="M0 3.75A.75.75 0 01.75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.496 4.496 0 0115.75 3h7.5a.75.75 0 
+            01.75.75v15.063a.75.75 0 01-.755.75l-7.682-.052a3 3 0 00-2.142.878l-.89.891a.75.75 0 01-1.061 0l-.902-.901a3
+            3 0 00-2.121-.879H.75a.75.75 0 01-.75-.75v-15zm11.247 3.747a3 3 0 00-3-2.997H1.5V18h6.947a4.5 4.5
+            0012.803.98l-.003-11.483zm1.503 11.485V7.5a3 3 0 013-3h6.75v13.558l-6.927-.047a4.5 4.5 0 00-2.823.971z"></path></svg>  Lainaa
+        </button>
+    </div>
+    
+    <!-- Portfolio Item Heading -->
+    <h1 class="mt-4">Lisätiedot</h1>
+      <h3 class="mb-4">{{rel.name}}</h3>
+  
+    <!-- Portfolio Item Row -->
+    <div class="row border pt-2 h-50">
+  
+        <!-- Kuva kolumni -->
+        <div class="col-md-4 text-center my-3">
+        {% if rel.cover %}
+        <img class="img-fluid" src="{{ rel.cover.url }}" alt="Kansikuva">
+        {% else %}
+        <img class="img-fluid" src="{% static 'core/images/rel_no_picture.png' %}" alt="Ei kuvaa">
+        {% endif %}
+        </div>
+  
+        <!-- Kuvaus kolumni -->
+        <div class="col-md-4 my-3 ">
+            <h3>Kuvaus</h3>
+            <p>{{rel.description}}</p>
+        </div>
+    
+        <!-- Lisätieto kolumni -->
+        <div class="col-md-3 my-3">
+            <h3>Tiedot</h3>
+            <ul class="list-unstyled">
+                <li class="pt-2"><b>Julkaisija :</b> <small><i class="fa fa-user mr-1"></i> {{rel.owner.username }}</small></li>
+                <li class="pt-2"><b>ID :</b> <small>{{rel.id}}</small></li>
+                <li class="pt-2"><b>Tekijät :</b> <small>{% for a in rel.authors.all %}
+                    <div class="tag-item">{{a}}</div>{% endfor %}</small></li>
+                <li class="pt-2"><b>Teos :</b> <small>{{rel.name}}</small></li>
+                <li class="pt-2"><b>Julkaisupäivämäärä :</b> <small>{{rel.release_date|date:"d.m.Y"}}</small></li>
+            </ul>
+
+            <!-- Tagit -->
+            {% for t in rel.topics.all %}
+            <div class="topic_tag">{{t}}<br></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    
+    <!-- Kommentit & Palautteet -->
+    <div class="row justify-content-end">
+    <h1>{{msg}}</h1>
+        
+        <!-- Kommentit -->
+        <div class="col border border-6">
+            <h5 class="text-uppercase font-weight-bold py-3">Parhaat arvostelut</h5>
+            {% if top_reviews %}
+                {% include 'browse/review_rating_partial.html'%}
+            {% else %}
+            <p>Ei arvioituja teoksia</p>
+            {% endif %}
+        </div>
+        
+        
+        <!-- Palaute -->
+        <div class="col-md-5 border border-6">
+            <h5 class="text-uppercase font-weight-bold py-3">Arvioi tuote</h5>
+        {% if not user.is_authenticated %}
+            <p>Et ole kirjautunut. Kirjaudu antaaksesi arvioita!</p>
+
+        {% else %}
+            <p>{{msg}}</p>
+            {%if has_reviewed %}
+            <p>Olet jo antanut arvostelut tuotteelle. Käy tarkastamassa omista lainoistasi!</p>
+            {% else %}
+            <form method="post" action="post_review/">
+                
+                {% csrf_token %}
+                <input type="hidden" name="prod_id" id="{{rel.id}}" value=""/>
+                <div class="form-group center">
+                    <textarea class="input w-100 h-50" style="overflow:auto;resize:none" rows="6" type="text" name="comment" placeholder="Palautteesi tähän, kiitos!"></textarea>
+                </div>
+                <div class="center row justify-content-between p-1">
+                    
+                    <div class="rating p-2 mt-2 col">
+                        <input id="rating-5" type="radio" name="rating" value="5"/><label for="rating-5"><i class="fas fa-3x fa-star"></i></label>
+                        <input id="rating-4" type="radio" name="rating" value="4"/><label for="rating-4"><i class="fas fa-3x fa-star"></i></label>
+                        <input id="rating-3" type="radio" name="rating" value="3"/><label for="rating-3"><i class="fas fa-3x fa-star"></i></label>
+                        <input id="rating-2" type="radio" name="rating" value="2"/><label for="rating-2"><i class="fas fa-3x fa-star"></i></label>
+                        <input id="rating-1" type="radio" name="rating" value="1"/><label for="rating-1"><i class="fas fa-3x fa-star"></i></label>
+                        
+                        
+                            <button type="submit" class="input p-1 mt-2 col text-center" id="submit_button" value="Lähetä">Lähteä arvio</button>
+                        </div>
+                        {%endif%}
+                    
+                    </div>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+</div>
+</div>
+
+{% include 'browse/lend_modal.html' with id=rel.id %}
+
+{% endblock %}
+
+

@@ -1,0 +1,18 @@
+
+<!-- Arviot osittaisnäkymä -->
+
+{% for review in top_reviews %}
+<div class="border border-2 border-light border-radius-10 m-3">
+    <div class="review">
+        <i class="fa fa-user mr-1"></i> <b>{{review.user}}</b>
+        <i class="fa fa-star" style="float: right; {% if review.rating > 4 %}color:#ffc107;{%endif%}"></i>
+        <i class="fa fa-star" style="float: right; {% if review.rating > 3 %}color:#ffc107;{%endif%}"></i>
+        <i class="fa fa-star" style="float: right; {% if review.rating > 2 %}color:#ffc107;{%endif%}"></i>
+        <i class="fa fa-star" style="float: right; {% if review.rating > 1 %}color:#ffc107;{%endif%}"></i>
+        <i class="fa fa-star" style="float: right; {% if review.rating > 0 %}color:#ffc107;{%endif%}"></i>
+    </div>
+    <div class="review-body">        
+        <p><i class="bi bi-quote">{%if review.verbal_review%} -- {{review.verbal_review|truncatechars:70}}{%else%} {%endif%}</i></p>
+    </div>
+</div>
+{%endfor%}

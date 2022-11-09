@@ -1,0 +1,30 @@
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Kirjaudu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+        <form action="{% url 'login' %}" method="post">
+        <div class="modal-body">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="username">Käyttäjätunnus</label>
+            <input type="text" class="form-control" name="username" placeholder="Erkkiesimerkki">
+          </div>
+          <div class="form-group">
+            <label for="password">Salasana</label>
+            <input type="password" class="form-control" name="password" placeholder="********">
+          </div>
+          <input type="submit" value="Kirjaudu" class="mt-2 mb-2 btn btn-primary">
+          <a href="{% url 'account:registration' %}" alt="Rekisteröitymissivulle">
+          <button type="button" class="btn btn-secondary mt-0">Rekisteröitymissivulle</button>
+          </a>
+          <br><p>Tai: <br>
+          <a class="mt-2 mb-2 btn btn-secondary" href="{% url 'social:begin' 'github' %}"><i class="fa fa-github" aria-hidden="true"></i> Kirjaudu GitHub-tunnuksella</a></p>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

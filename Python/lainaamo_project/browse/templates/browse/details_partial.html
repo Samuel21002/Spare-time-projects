@@ -1,0 +1,59 @@
+{% load static %}
+
+<!-- Hakutulos -->
+
+<div class="row border-top border-bottom border-1 border-secondary justify-content-center py-3">
+    
+    <div class="col-md-3 text-center center align-self-center my-3">
+        {% if rel.cover %}
+            <img class="img-fluid" src="{{ rel.cover.url }}" alt="Kansikuva">
+        {% else %}
+            <img class="img-fluid" src="{% static 'core/images/rel_no_picture.png' %}" alt="Ei kuvaa" height=150 width=120>
+        {% endif %}
+        {% comment %} <img class="img-fluid" src="{% static 'core/images/rel_no_picture.png' %}" alt="Ei kuvaa" height=150 width=120> {% endcomment %}
+    </div>
+
+
+    <div class="col-md-4 text-center px-2 align-self-center">
+        <ul class="list-unstyled">
+            <li><strong>{{rel.name}}</strong></li>
+            <br>
+            <li><small>
+                {% for a in rel.authors.all %}
+                {% if not forloop.last %}
+                    {{ a }},
+                {% else %}
+                    {{ a }}
+                {% endif %}
+                {% endfor %}</small>
+            </li>
+	      <li>
+                Keskiarvo:
+            </li>
+	    <li>
+                <div class="d-flex flex-row-reverse justify-content-center p-1">
+                    <i class="fa fa-star" style="float: right; {% if rel.average_rating > 4 %}color:#ffc107;{%endif%}"></i>
+                    <i class="fa fa-star" style="float: right; {% if rel.average_rating > 3 %}color:#ffc107;{%endif%}"></i>
+                    <i class="fa fa-star" style="float: right; {% if rel.average_rating > 2 %}color:#ffc107;{%endif%}"></i>
+
+                    <i class="fa fa-star" style="float: right; {% if rel.average_rating > 1 %}color:#ffc107;{%endif%}"></i>
+                    <i class="fa fa-star" style="float: right; {% if rel.average_rating > 0 %}color:#ffc107;{%endif%}"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Painikkeet sivulla -->
+    <div class="col-md-3 py-2 text-center m-2">
+        <a href="{% url 'browse:release_details' rel.id %}" class="btn btn-outline-secondary btn-space my-2 mx-1">Lisätietoa</a>
+        {% if user.is_authenticated  %}
+        <a href="#" class="btn btn-outline-primary btn-space align-right my-2 mx-1" data-bs-toggle="modal" data-bs-target="#lendModal_{{rel.id}}">Lainaa</a>
+        {% else %}
+        <a href="#" class="btn btn-outline-primary btn-space align-right my-2 mx-1" data-bs-toggle="modal" data-bs-target="#loginModal">Lainaa</a>
+        {% endif %}
+    </div>
+    
+    {% include 'browse/lend_modal.html' with id=rel.id %}
+
+</div>
+

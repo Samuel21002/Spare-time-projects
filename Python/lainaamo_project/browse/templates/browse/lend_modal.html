@@ -1,0 +1,21 @@
+<!--Modal for lending -->
+<div class="modal fade" id="lendModal_{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Lainaa teosta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Haluatko lisätä teoksen '{{rel.name}}' lainoihin?</p>
+            </div>
+            <div class="modal-footer">
+                <form method="post" action="{% url 'browse:add_to_db' id %}">
+                    {% csrf_token %}
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Peruuta</button>
+                    <button type="submit" class="btn btn-primary ms-auto justify-content-end m-3 p-2" name="submit" data-bs-dismiss="modal">Lainaa</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

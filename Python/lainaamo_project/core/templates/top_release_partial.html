@@ -1,0 +1,20 @@
+{%load static%}
+
+<div class="card card-body text-center">
+<div class="p-7">
+    {{rel}}
+    {% if r.cover %}
+    <img class="img-fluid" src="{{ r.cover.url }}" alt="Kansikuva">
+    {% else %}
+    <img class="img-fluid" src="{% static 'core/images/rel_no_picture.png' %}" alt="Ei kuvaa" height=120 width=90>
+    {% endif %}
+</div>
+<div>
+    <i class="fa fa-star" style="float: right; {% if val.rating|floatformat > 4 %}color:#ffc107;{%endif%}"></i>
+    <i class="fa fa-star" style="float: right; {% if val.rating|floatformat > 3 %}color:#ffc107;{%endif%}"></i>
+    <i class="fa fa-star" style="float: right; {% if val.rating|floatformat > 2 %}color:#ffc107;{%endif%}"></i>
+    <i class="fa fa-star" style="float: right; {% if val.rating|floatformat > 1 %}color:#ffc107;{%endif%}"></i>
+    <i class="fa fa-star" style="float: right; {% if val.rating|floatformat > 0 %}color:#ffc107;{%endif%}"></i>
+</div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="modal fade" id="AuthorModal" tabindex="-1" role="dialog" aria-labelledby="AuthorModallLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="AuthorModalLabel">Lisää tekijä</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <form action="{% url 'account:add_author' %}" method="post">
+          <div class="modal-body">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="first_name">Etunimi</label>
+              <input type="text" class="form-control" name="first_name" placeholder="Milla">
+            </div>
+            <div class="form-group">
+              <label for="last_name">Sukunimi</label>
+              <input type="text" class="form-control" name="last_name" placeholder="Mallikas">
+            </div>
+            <input type="submit" value="Lisää" class="mt-2 mb-2 btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

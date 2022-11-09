@@ -1,0 +1,20 @@
+<div class="modal fade" id="TopicModal" tabindex="-1" role="dialog" aria-labelledby="TopicModallLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TopicLabel">Uusi aihe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <form action="{% url 'account:add_topic' %}" method="post">
+          <div class="modal-body">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="fopic_name">Aihe</label>
+              <input type="text" class="form-control" name="topic_name" placeholder="Aihe">
+            </div>
+            <input type="submit" value="Lisää" class="mt-2 mb-2 btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
