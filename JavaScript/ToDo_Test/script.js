@@ -1,205 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-
-  <title>ToDo -list using pure JS</title>
-
-  <style>
-    body {
-      width: 100%;
-      min-width: 500px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      background-color: rgba(233, 237, 177, 0.156);
-    }
-
-    h1 {
-      font-family: 'Indie Flower';
-    }
-
-    .container {
-
-      margin: 0 auto;
-      box-sizing: border-box;
-
-      padding: 5px;
-      max-width: 1000px;
-      border: 1px solid rgb(216, 200, 200);
-      border-radius: 5px;
-      text-align: center;
-    }
-
-    #list_Output {
-
-      margin: 15px;
-      color: rgb(132, 4, 4);
-    }
-
-
-    .upper_navbar .btn_grp {
-      margin: 20px;
-      width: 100%;
-    }
-
-    .toDo_ul {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      color: rgb(67, 50, 50);
-    }
-
-    .toDo_ul li {
-      background-color: rgba(150, 230, 184, 0.29);
-      margin: 2px;
-    }
-
-    .submitButton {
-      background: transparent;
-      font-size: 16px;
-      height: 40px;
-      width: 100px;
-      margin: 10px 10px;
-      text-align: center;
-      border: 2px solid #125fa275;
-      border-radius: 5px;
-      transition: all 0.1s ease-in-out 0s;
-    }
-
-    .submitButton:hover {
-      background: #98d29e78;
-    }
-
-    .textField {
-
-      border: 0;
-      padding: 10px 0;
-      margin-left: 20px;
-      border-bottom: 1px solid #ccc;
-      font-size: 1.4rem;
-      color: #333;
-      width: 275px;
-      height: 30px;
-      letter-spacing: 1px;
-      outline: 0;
-    }
-
-
-    .textField~.focus-border-11 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #3399FF;
-      transition: 0.4s;
-    }
-
-    .textField:focus~.focus-border-11 {
-      width: 100%;
-      transition: 0.4s;
-    }
-
-    .toDo_item {
-
-      display: flex;
-      border-bottom: 1px solid rgb(191, 149, 149);
-      border-radius: 10px;
-      margin: 10px 0px 0px 0px;
-      flex-direction: row;
-      list-style: none;
-      height: 60px;
-      justify-content: space-evenly;
-      -webkit-animation: fadeIn 0.5s;
-
-    }
-
-    .toDo_item:hover {
-
-      background-color: rgb(247, 231, 203);
-      transition: all 0.1s ease-in-out;
-
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        height: 0px;
-      }
-
-      100% {
-        opacity: 1;
-        height: 60px;
-      }
-    }
-
-    .toDo_item_textBox {
-
-      font-family: 'Indie Flower', cursive;
-      font-weight: bold;
-      font-size: 1.4rem;
-      outline: 0;
-      margin: 10px 20px 10px 20px;
-      padding-left: 10px;
-      border: 0;
-      width: 60%;
-      height: 2rem;
-      border-radius: 5px;
-      background: transparent;
-    }
-
-    .toDo_item_button {
-
-      background: transparent;
-      font-size: 14px;
-      height: 40px;
-      width: 100px;
-      margin: 10px 10px;
-      text-align: center;
-      border: 2px solid #125fa275;
-      border-radius: 5px;
-      transition: all 0.1s ease-in-out 0s;
-    }
-
-    .toDo_item_button:hover {
-      background: #4fd05c72;
-    }
-  </style>
-
-</head>
-
-<body>
-  <div class="container">
-    <h1>ToDo List - Test</h1>
-
-    <nav class="upper_navbar">
-      <output id="list_Output"></output>
-      <form onsubmit="handleSubmit(event)">
-        <label for="toDo_textbox"><strong>Item:</strong></label>
-        <input type="text" class="textField" id="toDo_textbox" size="40" maxlength="60"
-          onkeydown="validateEnterKeyPress(event)" autofocus />
-
-        <div class="btn_grp">
-          <input type="button" class="submitButton" id="toDo_addBtn" onclick="add_toDo(toDo_textbox.value)"
-            value="Add" />
-          <input type="button" class="submitButton" id="toDo_clearBtn" onclick="clearAll()" value="Clear" />
-        </div>
-      </form>
-    </nav>
-
-    <ul class="toDo_ul" id="toDo_List">
-      <!--JS Elements Here-->
-    </ul>
-  </div>
-
-  <script>
-
     const toDo_textbox = document.getElementById('toDo_textbox')  //Textvox
     var output = document.getElementById('list_Output') //Displays messages
     var toDo_ul = document.getElementById('toDo_List')  //List element
@@ -209,7 +7,8 @@
     var id = 1  //Just for creating element "id's" for the markup 
 
     //Gets all elements from the cache if there is any
-    addEventListener('load', (event) => {
+   
+
       const str = localStorage.getItem('array_elems')
 
       list_elems = JSON.parse(str)
@@ -217,7 +16,7 @@
       console.log('The page is fully loaded.')
 
       list_elems.forEach((f) => createObjectToView(f))  //Creates the <li> -elements for the page
-    })
+    
 
     //Prevents the submit functionality
     function handleSubmit(event) {
@@ -357,7 +156,3 @@
         }
       }
     }
-  </script>
-</body>
-
-</html>

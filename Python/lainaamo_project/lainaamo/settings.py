@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-io!ef8ys#j0j-v_174!gl7i$52m&$f-()znn!w$m+1by)68m34'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -148,11 +148,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GITHUB_KEY = '44d6e7607e0a2bd6c49b'
-SOCIAL_AUTH_GITHUB_SECRET = '6f2156bd0893ad50a16ad427127a442988fa2113'
-
-# SOCIAL_AUTH_GOOGLE_KEY = '31451174715-ka2hciqfj79ol3pgsk70jg5imiat0vg7.apps.googleusercontent.com'
-# SOCIAL_AUTH_GOOGLE_SECRET = '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'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 

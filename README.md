@@ -7,4 +7,8 @@ Here are some spare-time small projects showcasing my current skills. I will add
 
 **Lainalapiot** : A group-project using Python / Django, HTML, CSS and Bootstrap. The project name is arbitrary but this showcases the knowledge in full-stack development using Django.
 
+Admin account has been made:
+ - Username: *admin*
+ - Password: *admin*
+
 **Todo Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browser cache.
