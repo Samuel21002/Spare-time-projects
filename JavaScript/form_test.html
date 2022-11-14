@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 01 - Samuel L-Kovanko</title>
+
+    <script>
+
+        function validateForm() {
+
+            let fullname = document.getElementById("id_fullname").value
+            let password = document.getElementById("id_password").value
+            let password_again = document.getElementById("id_password_again").value
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let hobbies = document.getElementsByName("hobbies")
+            let hobbies_arr = []; hobbies.forEach((e) => { if (e.checked) hobbies_arr.push(e.value) }) // Creates a variable converting NodeList to an Array to joined string
+            let birthdate = document.getElementById("id_birthdate").value
+            let height = document.getElementById("id_height_number").value
+            let fav_color = document.getElementById("id_favcolor").value
+            let homecountry = document.querySelector('select[name="homecountry"]').value
+            let profession = document.getElementById("id_profession").value
+            let message = document.getElementById("id_message").value
+
+            // Resets the output-box
+            let output = document.getElementById("id_output_result")
+            output.innerHTML = ""
+
+            //Regex for password
+            let checkPwd = Boolean(password.match(/^[\w_,.-:;?!]{8,20}$/i))
+
+            // Conditions for a valid form
+            const conditionsArray = [
+                Boolean(fullname),
+                Boolean(checkPwd),
+                Boolean(password),
+                Boolean(password_again),
+                Boolean(password === password_again),
+                Boolean(gender),
+                Boolean(message)
+            ]
+
+            // If any of the conditions fail, error messages will be displayed
+            if (conditionsArray.includes(false)) {
+
+                if (!fullname) write_to_HTML("Name field cannot be empty!", fullname, true)
+                if (!checkPwd) write_to_HTML("Invalid password!<br>The password field, accepts 8-20 characters: <br> a-z, A-Z, 0-9 and following punctuation characters : _,.-:;?!", password, true)
+                if (!password || !password_again) write_to_HTML("Password fields cannot be empty!", password, true)
+                if (password !== password_again) write_to_HTML("Password fields do not match.", password_again, true)
+                if (!gender) write_to_HTML("Please pick a gender", gender, true)
+                if (!message) write_to_HTML("Message field cannot be empty!", message, true)
+
+            }
+
+            // If validation passes, print all values to the output box
+            else {
+
+                write_to_HTML("Name", fullname)
+                write_to_HTML("Password", password)
+                write_to_HTML("Password Again", password_again)
+                write_to_HTML("Gender", gender.value)
+                write_to_HTML("Hobbies", hobbies_arr.join(", "))
+                write_to_HTML("Birthdate", birthdate)
+                write_to_HTML("Height", height)
+                write_to_HTML("Favourite Color", fav_color)
+                write_to_HTML("Home Country", homecountry)
+                write_to_HTML("Profession", profession)
+                write_to_HTML("Message", message)
+
+            }
+        }
+
+        /* Function for writing a message to the output box.
+        Takes in the message and the value of the variable.
+        'isError' is provided to emphasize an error message (changes the font color to red). It is false by default */
+        function write_to_HTML(text, value, isError = false) {
+
+            // Get the output box element
+            let output = document.getElementById("id_output_result")
+            value ? value : value = "-"
+
+            if (isError) {
+
+                output.style.color = `red`
+                output.innerHTML += ` - ${text}<br>`
+
+            } else {
+
+                output.style.color = `black`
+                output.innerHTML += `${text} : <strong>${value}</strong><br>`
+            }
+        }
+    </script>
+
+</head>
+
+<style>
+    body {
+
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.1rem;
+        margin: auto;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .container {
+
+        height: fit-content;
+        margin: 2%;
+
+    }
+
+    form {
+
+        padding: 15px 35px 15px 35px;
+        margin: auto;
+        justify-content: right;
+        border: 1px solid black;
+        width: fit-content;
+    }
+
+    .element {
+
+        display: flex;
+        flex-direction: column;
+        margin: 10px 5px 10px 5px;
+        width: 450px;
+        justify-content: start;
+
+    }
+
+    .flexRow {
+
+        flex-direction: row;
+
+    }
+
+    .element label {
+        padding: 5px 0px 5px 0px;
+    }
+
+    .formInput {
+
+        min-height: 30px;
+        font-size: 1.1rem;
+        margin: 0px 5px 5px 0px;
+        padding-left: 5px;
+        border: 2px solid rgb(199, 175, 124);
+        border-radius: 10px;
+
+    }
+
+    .formCheckboxAndRadio {
+
+        margin: 0px 10px 10px 10px;
+        padding-left: 5px;
+        height: 30px;
+
+    }
+
+    .formButton {
+
+        background-color: transparent;
+        border: 2px solid grey;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 10px 0px 0px;
+        width: 90px;
+        height: 45px;
+
+    }
+
+    .formButton:hover {
+
+        background-color: rgba(167, 229, 202, 0.608);
+        cursor: pointer;
+
+    }
+
+    #id_output_result {
+
+        margin-top: 20px;
+        letter-spacing: 1px;
+
+    }
+</style>
+
+<body>
+
+    <!--Markup-->
+    <div class="container">
+
+        <form onsubmit="return false">
+            <h1>Submit Form:</h1>
+
+            <!--Name-->
+            <div class="element">
+                <label for="id_fullname">Full Name: </label>
+                <input type="text" class="formInput" id="id_fullname" size="60" required="true"
+                    placeholder="Full name here" autocomplete="off" maxlength="80" autofocus>
+            </div>
+
+            <!--Password-->
+            <div class="element">
+                <label for="id_password">Password: </label>
+                <input type="password" class="formInput" id="id_password" size="30" maxlength="20" required="true">
+            </div>
+
+            <!--Password Again-->
+            <div class="element">
+                <label for="id_password">Password again: </label>
+                <input type="password" class="formInput" id="id_password_again" size="30" maxlength="20"
+                    required="true">
+            </div>
+
+            <!--Gender-->
+            <div class="element flexRow">
+                <label>Gender: </label>
+
+                <input type="radio" class="formCheckboxAndRadio" name="gender" id="id_m" size="30" value="Male">
+                <label for="id_m"> Male</label>
+
+                <input type="radio" class="formCheckboxAndRadio" name="gender" id="id_f" size="30" value="Female">
+                <label for="id_f"> Female </label>
+
+                <input type="radio" class="formCheckboxAndRadio" name="gender" id="id_o" size="30" value="Other" checked
+                    required="true">
+                <label for="id_o"> Other </label>
+            </div>
+
+            <!--Hobbies-->
+            <div class="element flexRow">
+                <label>Hobbies: </label>
+                <input type="checkbox" class="formCheckboxAndRadio" name="hobbies" id="hobby1" size="30" value="Games">
+                <label for="hobby1"> Games</label>
+
+                <input type="checkbox" class="formCheckboxAndRadio" name="hobbies" id="hobby2" size="30" value="Music">
+                <label for="hobby2"> Music</label>
+
+                <input type="checkbox" class="formCheckboxAndRadio" name="hobbies" id="hobby3" size="30" value="Sports">
+                <label for="hobby3"> Sports</label>
+
+                <input type="checkbox" class="formCheckboxAndRadio" name="hobbies" id="hobby4" size="30" value="TV">
+                <label for="hobby4"> TV</label>
+            </div>
+
+            <!--Birthday-->
+            <div class="element">
+                <label for="id_birthdate">Birth Date: </label>
+                <input type="date" class="formInput" id="id_birthdate" value="Birth Date">
+            </div>
+
+            <!--Height-->
+            <div class="element">
+                <label for="id_height_range">Height (in cm): </label>
+                <input type="range" class="formInput" min="40" max="300" id="id_height_range"
+                    oninput="id_height_number.value=id_height_range.value">
+                <input type="number" class="formInput" min="40" max="300" id="id_height_number" value="125"
+                    oninput="id_height_range.value=id_height_number.value"
+                    onkeyup="if(this.value > 300) this.value = 300; else if(this.value < 40) this.value = 40;">
+            </div>
+
+            <div class="element">
+                <label for="id_color">Favourite Color: </label>
+                <input type="color" id="id_favcolor" name="favcolor" value="#ff0000">
+            </div>
+
+            <!--Home country-->
+            <div class="element">
+                <label for="id_homecountry">Home Country: </label>
+                <select name="homecountry" class="formInput" id="id_homecountry">
+                    <option value="fi" selected>Finland</option>
+                    <option value="ru">Russia</option>
+                    <optgroup label="Scandinavian">
+                        <option value="sv">Sweden</option>
+                        <option value="no">Norway</option>
+                        <option value="dk">Denmark</option>
+                    </optgroup>
+                    <optgroup label="Baltic">
+                        <option value="ee">Estonia</option>
+                        <option value="lv">Latvia</option>
+                        <option value="lt">Lithuania</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <!--Profession Datalist-->
+            <div class="element">
+                <label for="id_profession">Profession: </label>
+                <input list="id_profession_datalist" class="formInput" name="professions" id="id_profession"
+                    autocomplete="off">
+                <datalist id="id_profession_datalist">
+                    <option value="Teacher">
+                    <option value="Nurse">
+                    <option value="Plumber">
+                    <option value="Bureaucrat">
+                    <option value="Lawyer">
+                    <option value="Police">
+                </datalist>
+            </div>
+
+            <!--Message Field-->
+            <div class="element">
+                <label for="id_message">Message: </label>
+                <textarea id="id_message" class="formInput" rows="6" cols="60" autocomplete="off"
+                    placeholder="Write your message here" maxlength="1000" required></textarea>
+            </div>
+
+            <!--Submit Button-->
+            <div class="element">
+                <button type="submit" class="formButton" id="id_submit" onclick="validateForm()">Send</button>
+            </div>
+
+            <output id="id_output_result" class="element" style="color:rgb(0, 0, 0)"></output>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+<!--
+ASSIGNMENT:
+
+Assignment #1 - HTML5 Forms and Handling Form Input in JavaScript
+This assignment is all about making HTML5 forms and how to read them using JavaScript.
+
+Make a web page, which as a following form with according labels and input elements:
+
+Full Name, a required text field with autofocus and placeholder 60 characters size, max 80 characters
+Password, a required password field, accepts 8-20 characters: a-z, A-Z, 0-9 and following punctuation characters _,.-:;?!
+Password again, same specification as above, must match the above field in value
+Gender, required, radio selections, choices: male, female, other
+Hobbies, a checkbox selection (can select zero to many): games, music, sports, TV
+Birth Date, date field
+Height, a range input from 40 to 300 cm. A linked number field showing the numerical value and allow to input exact number. In other words both the number field and range field show the same value, changing one will automatically change the other.
+Favorite color, standard 24-bit RGB color selector
+Home Country, <select><option> selector with Finland as default choice, also include Russia and other Scandinavian countries and Baltic countries as possible choices.
+    Profession, datalist, with at least 4 predetermined choice e.g. teacher, nurse, plumber and bureaucrat
+Message, a text area, which is required and is by default 6 rows high and 60 columns wide. With placeholder and max length for input set to 1000 characters.
+
+There should also be a Send <button>. Pressing the button will validate the form and print out possible error messages if needed. 
+If everything is valid and all required fields are given, then it a JavaScript function will print out all the input values to an output field.
+It should also be able to print out, what hobbies the user selected or what was the gender selection, not just contents of the text fields.
+The result of every input must be printed for complete solution.
+
+Tip: Use HTML5 form abilities to their fullest extend. Use regular expressions and/or pattern attribute to limit the password to certain length and characters.
+
+-->

@@ -17,3 +17,5 @@ Admin account has been made:
 ## JS:
 **Todo-List Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browser cache.
 NOTE! Run project via a local server eg. VSCode Live Server
+
+**Form test** : Purely frontend example of a submit form with "form validation"
