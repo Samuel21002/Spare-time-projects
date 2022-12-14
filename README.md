@@ -15,7 +15,9 @@ Admin account has been made:
  - Password: *admin*
 
 ## JS:
-**Todo-List Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browser cache.
+**Todo-List Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browsers cache.
 NOTE! Run project via a local server eg. VSCode Live Server
+
+**Function Calculator : A function calculator using Bootrap, Bulma, JQuery and Chart.js.
 
 **Form test** : Purely frontend example of a submit form with "form validation"
