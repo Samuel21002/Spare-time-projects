@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Function calculator - Samuel L-Kovanko</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.0/chartjs-plugin-zoom.min.js"
+    integrity="sha512-B6F98QATBNaDHSE7uANGo5h0mU6fhKCUD+SPAY7KZDxE8QgZw9rewDtNiu3mbbutYDWOKT3SPYD8qDBpG2QnEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</head>
+<style>
+    .html,
+    body {
+        background-color: rgba(211, 232, 225, 0.389);
+        margin: 0 auto;
+        font-family: sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .inputbox {
+
+        border: 2px solid black;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: 0 auto;
+
+    }
+
+    .error {
+        color: red;
+    }
+
+    .chart_container {
+
+        max-width:60vw;
+        max-height:40vh; 
+
+    } 
+
+</style>
+
+<body>
+    <div class="container-inner m-4 row align-items-center justify-content-md-evenly">
+        <h1 class="my-2 h1 text-center display-4">Function calculator</h1>
+        <div class="col-xl-4 py-4" id="id_form">
+            <form class="w-100 text-center" onsubmit="return false">
+                <div class="mb-3">
+                    <label class="label" for="id_function">Function f(x): </label>
+                    <input class="inputbox form-control" type="text" id="id_function" autocomplete="off" 
+                        autofocus placeholder="eg. sin(x) * 2 + x" required>
+                </div>
+                <div class="mb-3">
+                    <label class="label" for="id_func_start">Start of x range: </label>
+                    <input class="inputbox input is-primary" type="number" step="any" id="id_func_start" value="0" 
+                        autocomplete="off" required>
+                </div>
+                <div class="mb-3">
+                    <label class="label" for="id_func_end">End of x range: </label>
+                    <input class="inputbox input is-primary" type="number" step="any" id="id_func_end" value="1" 
+                        autocomplete="off" required>
+                </div>
+                <div class="mb-3">
+                    <label class="label" for="id_x_step">X step: </label>
+                    <input class="inputbox input is-primary" type="number" step="any" id="id_x_step" value="1" 
+                        autocomplete="off" required>
+                </div>
+                <div>
+                    <button class="button is-success" type="submit" id="id_calculate">Calculate</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xl-8 img-responsive chart-container">
+            <canvas class="border border-2 rounded-3 border-dark w-100" id="id_canv"></canvas>
+        </div>
+        <p class="text-end fs-6"><small>Use mousewheel to zoom in our out</small></p>
+        <output class="w-100 border border-2 my-3 p-2 text-center" id="id_fx_result">Output Placeholder</output>
+    </div>
+</body>
+
+</html>
