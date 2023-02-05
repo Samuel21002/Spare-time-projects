@@ -8,15 +8,25 @@ Here are some spare-time small projects showcasing my current skills. I will add
 
 **Strong Password Generator** : Console-app using Python, asks user for string input, generates a stronger password using l33tstring and tells the user the strength of the final string.
 
+## Full-Stack (Python (Django) & JS)
+
 **Lainalapiot (Lainaamo)** : A *group-project* using Python / Django, HTML, CSS and Bootstrap. The project name is arbitrary but this showcases the knowledge in full-stack development using Django.
 
 Admin account has been made:
  - Username: *admin*
  - Password: *admin*
 
-## JS:
+**Helsinki Citybike App** : A full-stack Django application for viewing, searching for and managing citybike stations and journeys.
+Visit [this repository](https://github.com/Samuel21002/HelsinkiCityBikeApp) for more thorough details.
+
+Deployed on Azure: [https://helsinkicitybikeapp.azurewebsites.net/](https://helsinkicitybikeapp.azurewebsites.net/)
+Use the public account to view the site. 
+
+Username: citybikeuser , Password: citybik3sar3aw3som3
+
+## JavaScript:
 **Todo-List Webite** : Using HTML / CSS and JavaScript, a simple front-end ToDo list, which saves users tasks to the browsers cache.
-NOTE! Run project via a local server eg. VSCode Live Server
+*Run project via a local server eg. VSCode Live Server*
 
 **Function Calculator** : A function calculator using Bootrap, Bulma, JQuery and Chart.js.
 
